@@ -135,6 +135,34 @@ Production-ready helper functions (proposed for mainline integration):
 - All attack vectors prevented
 - User funds protected
 
+## Production Use
+
+### ✅ Ready to Use As-Is
+
+**Tests & Demos** - Safe to run immediately:
+```bash
+./setup.sh      # Safe: Only builds code and installs deps
+./run_tests.sh  # Safe: Runs conceptual tests (no blockchain calls)
+npm run demo:all # Safe: Mock data only
+```
+
+### ⚠️ Requires Adaptation
+
+**Helper Functions** - For actual blockchain integration:
+- `demos/src/lib/token-acl-helpers.ts` - Uses web3.js v2 API (adapt to v1.x)
+- `demos/src/lib/spl-token-integration.ts` - Needs current version compatibility
+- See `demos/WEB3JS_VERSION_NOTE.md` for adaptation guide
+
+**Gate Programs** - For mainnet deployment:
+- `gate_programs/allow_list/` - Reference only, customize for your use case
+- `gate_programs/block_list/` - Reference only, security audit required
+
+### Purpose of This Repository
+
+This is a **testing and validation framework**, not a production Token ACL implementation.
+
+For actual Token ACL implementation, see: [solana-foundation/token-acl](https://github.com/solana-foundation/token-acl)
+
 ## Installation
 
 ### Prerequisites
