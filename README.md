@@ -146,22 +146,36 @@ Production-ready helper functions (proposed for mainline integration):
 npm run demo:all # Safe: Mock data only
 ```
 
-### ⚠️ Requires Adaptation
+**Helper Functions (v1.x)** - Production ready NOW:
+- ✅ `demos/src/lib/token-acl-helpers-v1.ts` - **Web3.js v1.x compatible**
+- ✅ `demos/src/lib/spl-token-integration-v1.ts` - **Works with current @solana/spl-token**
+- ✅ Ready to use in your project today!
 
-**Helper Functions** - For actual blockchain integration:
-- `demos/src/lib/token-acl-helpers.ts` - Uses web3.js v2 API (adapt to v1.x)
-- `demos/src/lib/spl-token-integration.ts` - Needs current version compatibility
-- See `demos/WEB3JS_VERSION_NOTE.md` for adaptation guide
+**Gate Programs (Production)** - Enhanced with production features:
+- ✅ `gate_programs/allow_list_production/` - **Production-ready allow list**
+  - Admin controls (initialize, add/remove, update authority)
+  - Tiered access levels
+  - Expiry handling
+  - Comprehensive error handling
+- ⚠️ **Still requires**: Security audit before mainnet deployment
 
-**Gate Programs** - For mainnet deployment:
-- `gate_programs/allow_list/` - Reference only, customize for your use case
-- `gate_programs/block_list/` - Reference only, security audit required
+### Reference/Future Versions
+
+**Helper Functions (v2)** - For future web3.js v2:
+- `demos/src/lib/token-acl-helpers.ts` - Web3.js v2 API (future)
+- `demos/src/lib/spl-token-integration.ts` - Web3.js v2 API (future)
+- Use these when web3.js v2 is released
+
+**Gate Programs (Reference)** - Simple examples:
+- `gate_programs/allow_list/` - Basic allow list example
+- `gate_programs/block_list/` - Basic block list example
+- Use for learning the interface
 
 ### Purpose of This Repository
 
-This is a **testing and validation framework**, not a production Token ACL implementation.
+This is a **comprehensive testing, validation, and integration framework** for Token ACL.
 
-For actual Token ACL implementation, see: [solana-foundation/token-acl](https://github.com/solana-foundation/token-acl)
+For the core Token ACL implementation (FAMP), see: [solana-foundation/token-acl](https://github.com/solana-foundation/token-acl)
 
 ## Installation
 
