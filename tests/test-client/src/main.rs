@@ -5,6 +5,7 @@ mod composability;
 mod security;
 mod integration_flow_test;
 mod security_malicious_injection_test;
+mod rwa_workflow_test;
 
 use managed_freeze_authority::ManagedFreezeAuthorityTests;
 use permissionless_operations::PermissionlessOperationsTests;
@@ -13,6 +14,7 @@ use composability::ComposabilityTests;
 use security::SecurityTests;
 use integration_flow_test::IntegrationFlowTest;
 use security_malicious_injection_test::MaliciousInjectionPreventionTests;
+use rwa_workflow_test::RWAWorkflowTest;
 
 mod lib;
 use lib::{TestSuite, TestResult};
@@ -29,7 +31,14 @@ fn main() {
     
     let mut suite = TestSuite::new();
     
-    // INTEGRATION FLOW TEST FIRST! (Shows complete workflow)
+    // RWA WORKFLOW TEST FIRST! (The heart of the problem/solution)
+    println!("\n═══ RWA WORKFLOW TEST: THE HEART OF TOKEN ACL ═══\n");
+    let results = RWAWorkflowTest::run_all();
+    for result in results {
+        suite.add_result(result);
+    }
+    
+    // INTEGRATION FLOW TEST (Shows complete workflow)
     println!("\n═══ INTEGRATION FLOW TEST: COMPLETE WORKFLOW ═══\n");
     let results = IntegrationFlowTest::run_all();
     for result in results {
