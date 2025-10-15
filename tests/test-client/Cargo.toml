@@ -1,0 +1,18 @@
+[package]
+name = "test-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+solana-client = "1.18"
+solana-sdk = "1.18"
+spl-token-2022 = "1.0"
+spl-tlv-account-resolution = "0.5"
+borsh = "0.10"
+anyhow = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+clap = { version = "4.4", features = ["derive"] }
+
+[dev-dependencies]
+solana-program-test = "1.18"
+

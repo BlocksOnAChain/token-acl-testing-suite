@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "tests/test-client",
+    "gate_programs/allow_list",
+    "gate_programs/block_list"
+]
+resolver = "2"
+
