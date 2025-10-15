@@ -146,7 +146,7 @@ Production-ready helper functions (proposed for mainline integration):
 ### Quick Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/token-acl-testing-suite.git
+git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 cd token-acl-testing-suite
 ./setup.sh
 ```

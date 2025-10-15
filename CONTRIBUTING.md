@@ -38,7 +38,7 @@ Thank you for your interest in contributing! This document provides guidelines f
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/token-acl-testing-suite.git
+git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 cd token-acl-testing-suite
 
 # Run setup
@@ -84,7 +84,7 @@ Before starting work:
 ```bash
 # Fork the repository on GitHub
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/token-acl-testing-suite.git
+git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 
 # Create a feature branch
 git checkout -b feature/your-feature-name
