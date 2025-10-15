@@ -47,7 +47,7 @@ This guide will help you set up and run the sRFC 37 Token ACL testing suite.
 
 ```bash
 # Clone from GitHub
-git clone https://github.com/YOUR_USERNAME/token-acl-testing-suite.git
+git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 cd token-acl-testing-suite
 
 # Or if you downloaded the ZIP
@@ -300,8 +300,8 @@ Want to see results without installing?
 
 ### Support
 
-- **Issues**: https://github.com/YOUR_USERNAME/token-acl-testing-suite/issues
-- **Discussions**: https://github.com/YOUR_USERNAME/token-acl-testing-suite/discussions
+- **Issues**: https://github.com/BlocksOnAChain/token-acl-testing-suite/issues
+- **Discussions**: https://github.com/BlocksOnAChain/token-acl-testing-suite/discussions
 - **sRFC 37 Forum**: https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036
 
 ## Next Steps

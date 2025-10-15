@@ -39,7 +39,7 @@ Token ACL provides a revolutionary approach to permissioned tokens on Solana, el
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/token-acl-testing-suite.git
+git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 cd token-acl-testing-suite
 
 # Run setup (installs all dependencies)
@@ -325,8 +325,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/token-acl-testing-suite/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/token-acl-testing-suite/discussions)
+- **Issues**: [GitHub Issues](https://github.com/BlocksOnAChain/token-acl-testing-suite/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/BlocksOnAChain/token-acl-testing-suite/discussions)
 - **Forum**: [Solana Forum](https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036)
 
 ## Status
