@@ -22,7 +22,7 @@
 
 ## About
 
-This repository contains a **comprehensive testing and validation suite** for [sRFC 37: Efficient Block/Allow List Token Standard](https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036).
+This repository contains a **testing and validation suite** for [sRFC 37: Efficient Block/Allow List Token Standard](https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036).
 
 Token ACL provides a revolutionary approach to permissioned tokens on Solana, eliminating UX friction while maintaining protocol composability and strong security guarantees.
 
@@ -292,23 +292,25 @@ token-acl-testing-suite/
 
 | Role | Start Here | Description |
 |------|------------|-------------|
-| 🏢 **Token Issuers** | [FINAL_SUMMARY.md](FINAL_SUMMARY.md) | Benefits & ROI |
-| 💻 **Developers** | [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) | Integration guide |
-| 🔬 **Researchers** | [TEST_PLAN.md](TEST_PLAN.md) | Testing methodology |
-| 🛡️ **Security** | [SECURITY_VALIDATION.md](SECURITY_VALIDATION.md) | Security analysis |
-| ⚡ **Quick Ref** | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | API cheat sheet |
+| 🏢 **Token Issuers** | [docs/FINAL_SUMMARY.md](docs/FINAL_SUMMARY.md) | Benefits & ROI |
+| 💻 **Developers** | [INSTALL.md](INSTALL.md) | Quick start guide |
+| 🔬 **Researchers** | [docs/TEST_PLAN.md](docs/TEST_PLAN.md) | Testing methodology |
+| 🔧 **Integration** | [docs/IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) | Integration guide |
 
 ### Complete List
 
+**Root**:
 - [README.md](README.md) - This file
-- [INSTALL.md](INSTALL.md) - Installation guide
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-- [FINAL_SUMMARY.md](FINAL_SUMMARY.md) - Complete validation report
-- [SECURITY_VALIDATION.md](SECURITY_VALIDATION.md) - Security analysis
-- [TEST_PLAN.md](TEST_PLAN.md) - Testing strategy
-- [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) - Integration guide
-- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Quick reference
-- [TESTING_COMPLETE.md](TESTING_COMPLETE.md) - Test results summary
+- [INSTALL.md](INSTALL.md) - Installation & quick start
+- [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute
+- [LICENSE](LICENSE) - MIT License
+
+**Documentation** (`docs/`):
+- [FINAL_SUMMARY.md](docs/FINAL_SUMMARY.md) - Complete validation report
+- [TEST_PLAN.md](docs/TEST_PLAN.md) - Testing methodology
+- [IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) - Integration guide
+- [CODE_REVIEW.md](docs/CODE_REVIEW.md) - Production readiness
+- [TESTING_COMPLETE.md](docs/TESTING_COMPLETE.md) - Test results
 
 ## Contributing
 
