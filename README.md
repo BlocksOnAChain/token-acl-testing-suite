@@ -49,6 +49,8 @@ cd token-acl-testing-suite
 ./run_tests.sh
 ```
 
+> **Note**: As with any script from the internet, review `setup.sh` before running if desired. It only installs Rust/Node dependencies and builds the project - no system modifications.
+
 That's it! 🎉
 
 ### Run Demos
