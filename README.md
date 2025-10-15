@@ -26,13 +26,6 @@ This repository contains a **testing and validation suite** for [sRFC 37: Effici
 
 Token ACL provides a revolutionary approach to permissioned tokens on Solana, eliminating UX friction while maintaining protocol composability and strong security guarantees.
 
-### Key Innovations
-
-✨ **90%+ faster** user onboarding (seconds vs hours/days)  
-✨ **90% lower** transfer costs (5K vs 50K compute units)  
-✨ **protocol improvements** compatibility (vs 15% with transfer-hooks)  
-✨ **Security** through permission de-escalation  
-
 ## Quick Start
 
 ### One-Command Setup
@@ -60,10 +53,6 @@ cd demos
 npm run demo:all
 ```
 
-See three real-world use cases:
-- 🚫 **Sanctions List** - Automated compliance enforcement
-- ✅ **KYC Allow List** - Instant user onboarding
-- 🌍 **Geo-Blocking** - Regional compliance automation
 
 ## Features
 
@@ -76,19 +65,17 @@ See three real-world use cases:
 - **Gate Program Interface** (8) - Standardization compliance
 - **Authority Management** (6) - Control & delegation tests
 
-**Status**: ✅ All 41 tests validate sRFC 37 specification
+**Status**: ✅ All 42 tests validate sRFC 37 specification and implementation
 
 ### 🎪 Real-World Demos
 
-Three production-ready demonstrations:
+Three main demonstrations we will show:
 
-1. **Sanctions List** (`demos/src/sanctions-list-demo.ts`)
-   - 10-100x faster sanctions enforcement
+1. **Sanctions list** (`demos/src/sanctions-list-demo.ts`)
    - Automated account freezing
    - Zero manual overhead
 
-2. **KYC Allow List** (`demos/src/kyc-allowlist-demo.ts`)
-   - 1000x faster user onboarding
+2. **KYC Allow list** (`demos/src/kyc-allowlist-demo.ts`)
    - Instant access post-KYC
    - Seamless secondary market trading
 
@@ -97,23 +84,21 @@ Three production-ready demonstrations:
    - Automated regional restrictions
    - Dynamic compliance handling
 
-### 🔧 Developer Tools
+### 🔧 Developer Tools you can use:
 
-Production-ready helper functions (proposed for mainline integration):
+ Helper functions (proposed for mainline integration):
 
 - **Web3.js v2 Helpers** (`demos/src/lib/token-acl-helpers.ts`)
 - **SPL Token Extensions** (`demos/src/lib/spl-token-integration.ts`)
 
-### 📖 Complete Documentation
+### 📖 Relevant documentation
 
 - **INSTALL.md** - Installation & setup guide
-- **FINAL_SUMMARY.md** - Complete validation report
-- **SECURITY_VALIDATION.md** - Security analysis
 - **TEST_PLAN.md** - Testing methodology
 - **IMPLEMENTATION_GUIDE.md** - Integration guide
 - **QUICK_REFERENCE.md** - API cheat sheet
 
-## What Gets Tested
+## What gets tested here
 
 ### Promise #1: "Eliminates UX friction"
 
@@ -146,18 +131,18 @@ Production-ready helper functions (proposed for mainline integration):
 npm run demo:all # Safe: Mock data only
 ```
 
-**Helper Functions (v1.x)** - Production ready NOW:
+**Helper Functions (v1.x)**
 - ✅ `demos/src/lib/token-acl-helpers-v1.ts` - **Web3.js v1.x compatible**
 - ✅ `demos/src/lib/spl-token-integration-v1.ts` - **Works with current @solana/spl-token**
 - ✅ Ready to use in your project today!
 
-**Gate Programs (Production)** - Enhanced with production features:
-- ✅ `gate_programs/allow_list_production/` - **Production-ready allow list**
+**Gate Programs ** - 
+- ✅ `gate_programs/allow_list_production/` - **allow list**
   - Admin controls (initialize, add/remove, update authority)
   - Tiered access levels
   - Expiry handling
   - Comprehensive error handling
-- ⚠️ **Still requires**: Security audit before mainnet deployment
+- ⚠️ **Still requires**: Security audits before any mainnet deployment
 
 ### Reference/Future Versions
 
@@ -309,7 +294,6 @@ token-acl-testing-suite/
 - [FINAL_SUMMARY.md](docs/FINAL_SUMMARY.md) - Complete validation report
 - [TEST_PLAN.md](docs/TEST_PLAN.md) - Testing methodology
 - [IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) - Integration guide
-- [CODE_REVIEW.md](docs/CODE_REVIEW.md) - Production readiness
 - [TESTING_COMPLETE.md](docs/TESTING_COMPLETE.md) - Test results
 
 ## Contributing
@@ -333,7 +317,7 @@ Token ACL is perfect for:
 - 📜 **Security tokens** with KYC requirements
 - 🏢 **RWA tokens** with regulatory restrictions
 - 🌍 **Utility tokens** with geo-blocking
-- 🔒 **Any permissioned token** scenario
+- 🔒 **Any permissioned token** scenarios that you can imagine
 
 ## Key Metrics
 
@@ -345,7 +329,7 @@ Token ACL is perfect for:
 | Transfer accounts | 12+ | **3** | **75% ↓** |
 | Protocol support | ~15% | **~100%** | **6-7x ↑** |
 
-### Security
+### Security features
 
 ✅ Malicious transfer - PREVENTED  
 ✅ Account close - PREVENTED  
@@ -377,7 +361,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Status
 
-✅ **Production Ready**
+✅ **Ready for testing**
 - Test Coverage: 100% (41/41 tests)
 - Documentation: Complete
 - Security: Validated
