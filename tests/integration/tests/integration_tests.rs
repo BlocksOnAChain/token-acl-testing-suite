@@ -61,10 +61,11 @@ fn run_pda_derivation_test() -> TestResultReport {
         &program_id,
     );
     
-    // Assertion 1: Bump is valid
+    // Assertion 1: PDA was found (bump exists)
     assertions += 1;
-    if bump > 255 {
-        return TestResultReport::failure(test_name, format!("Invalid bump: {}", bump));
+    // bump is u8, so it's always <= 255, just verify derivation succeeded
+    if bump == 0 && pda == Pubkey::default() {
+        return TestResultReport::failure(test_name, "PDA derivation failed".to_string());
     }
     
     // Assertion 2: PDA is off-curve
