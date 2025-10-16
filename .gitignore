@@ -22,7 +22,8 @@ package-lock.json
 .DS_Store
 
 # Test results
-results/
+tests/reports/*.md
+tests/reports/*.txt
 *.profraw
 
 # Build artifacts

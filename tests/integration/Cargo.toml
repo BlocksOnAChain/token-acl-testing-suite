@@ -1,31 +1,42 @@
 [package]
-name = "token-acl-real-tests"
+name = "token_acl_integration_tests"
 version = "1.0.0"
 edition = "2021"
 
 [dependencies]
-solana-program = "1.18"
-solana-sdk = "1.18"
-solana-program-test = "1.18"
-spl-token-2022 = { version = "1.0", features = ["serde-traits"] }
-spl-tlv-account-resolution = "0.5"
-borsh = "0.10"
-tokio = { version = "1.35", features = ["full"] }
-anyhow = "1.0"
-chrono = "0.4"
+solana-program = { workspace = true }
+solana-sdk = { workspace = true }
+solana-program-test = { workspace = true }
+spl-token-2022 = { workspace = true }
+spl-tlv-account-resolution = { workspace = true }
+borsh = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+chrono = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+hex = { workspace = true }
 
 [dev-dependencies]
 proptest = "1"
 
 [[test]]
 name = "integration_tests"
-path = "tests/integration_tests.rs"
+path = "tests/integration.rs"
 
 [[test]]
 name = "core_logic_tests"
-path = "tests/core_logic_tests.rs"
+path = "tests/core_logic.rs"
 
 [[test]]
 name = "advanced_scenarios"
 path = "tests/advanced_scenarios.rs"
+
+[[test]]
+name = "security_tests"
+path = "tests/security_tests.rs"
+
+[[test]]
+name = "performance_benchmarks"
+path = "tests/performance_benchmarks.rs"
 

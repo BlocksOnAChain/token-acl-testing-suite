@@ -1,0 +1,21 @@
+# Rustfmt configuration for Token ACL Testing Suite
+
+# Edition
+edition = "2021"
+
+# Formatting options
+max_width = 100
+hard_tabs = false
+tab_spaces = 4
+newline_style = "Unix"
+
+# Import formatting
+reorder_imports = true
+
+# Function formatting
+fn_params_layout = "Tall"
+
+# Other options
+remove_nested_parens = true
+use_field_init_shorthand = true
+use_try_shorthand = true

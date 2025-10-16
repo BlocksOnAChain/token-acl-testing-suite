@@ -1,6 +1,17 @@
 MIT License
 
-Copyright (c) 2025 Token ACL Testing Suite Contributors
+Copyright (c) 2024-2025 Token ACL Testing Suite Contributors
+
+Token ACL Testing Suite - Comprehensive Testing Framework for sRFC 37
+====================================================================
+
+This software is part of the Token ACL Testing Suite, a comprehensive testing
+framework for the sRFC 37: Efficient Block/Allow List Token Standard.
+
+For more information about Token ACL and sRFC 37, visit:
+- Specification: https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036
+- Implementation: https://github.com/solana-foundation/token-acl
+- Testing Suite: https://github.com/BlocksOnAChain/token-acl-testing-suite
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

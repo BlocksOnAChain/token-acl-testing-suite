@@ -1,0 +1,22 @@
+[package]
+name = "production_allow_list"
+version = "1.0.0"
+edition = "2021"
+description = "Production-ready allow list gate program for Token ACL"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = { workspace = true }
+borsh = { workspace = true }
+spl-tlv-account-resolution = { workspace = true }
+thiserror = "1.0"
+
+[dev-dependencies]
+solana-program-test = { workspace = true }
+solana-sdk = { workspace = true }
+
+[features]
+no-entrypoint = []
+

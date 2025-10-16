@@ -1,0 +1,22 @@
+# Clippy configuration for Token ACL Testing Suite
+
+# Allow some lints that are common in test code
+# but would be problematic in production code
+
+# Allow unwrap in tests (common pattern)
+allow-unwrap-in-tests = true
+
+# Allow expect in tests (common pattern)
+allow-expect-in-tests = true
+
+# Allow panic in tests (common pattern)
+allow-print-in-tests = true
+
+# Allow single-character names in tests
+single-char-binding-names-threshold = 1
+
+# Allow missing docs in test modules
+missing-docs-in-crate-items = false
+
+# Allow high complexity in test functions
+cognitive-complexity-threshold = 30
