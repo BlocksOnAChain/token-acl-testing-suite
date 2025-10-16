@@ -43,3 +43,12 @@ out/
 *.temp
 .cache/
 
+# Debug and error files
+*_error.log
+*_error_report.md
+test_edition2024*
+edition2024_*
+
+# Temporary scripts
+test_optimizations.sh
+
