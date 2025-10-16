@@ -18,3 +18,7 @@ chrono = "0.4"
 name = "integration_tests"
 path = "tests/integration_tests.rs"
 
+[[test]]
+name = "core_logic_tests"
+path = "tests/core_logic_tests.rs"
+

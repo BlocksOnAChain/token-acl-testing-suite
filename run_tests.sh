@@ -19,8 +19,8 @@ echo "║   Running All Tests                                               ║"
 echo "╚═══════════════════════════════════════════════════════════════════╝"
 echo ""
 
-# Create results directory
-mkdir -p results
+# Create test-results directory
+mkdir -p test-results
 
 # Run the test suite
 echo -e "${BLUE}►${NC} Running real validation test suite..."
@@ -34,7 +34,9 @@ if cargo test -- --nocapture; then
     echo -e "${GREEN}║                    ALL TESTS PASSED! ✓                            ║${NC}"
     echo -e "${GREEN}╚═══════════════════════════════════════════════════════════════════╝${NC}"
     echo ""
-    echo "Test report generated at: results/test_report.md"
+    echo "Test reports generated:"
+    echo "  • test-results/REAL_TEST_RESULTS.md"
+    echo "  • test-results/CORE_LOGIC_TEST_RESULTS.md"
     echo ""
     echo "═══ QUICK SUMMARY ═══"
     echo ""
@@ -64,14 +66,13 @@ cd ../..
 echo ""
 echo "═══ NEXT STEPS ═══"
 echo ""
-echo "View full report:"
-echo "  cat results/test_report.md"
+echo "View test results:"
+echo "  cat test-results/REAL_TEST_RESULTS.md"
+echo "  cat test-results/CORE_LOGIC_TEST_RESULTS.md"
 echo ""
-echo "Read validation summary:"
-echo "  cat FINAL_SUMMARY.md"
-echo ""
-echo "Run demos:"
-echo "  cd demos && npm run demo:all"
+echo "Read documentation:"
+echo "  cat docs/FINAL_SUMMARY.md"
+echo "  cat docs/IMPLEMENTATION_GUIDE.md"
 echo ""
 
 exit $EXIT_CODE
