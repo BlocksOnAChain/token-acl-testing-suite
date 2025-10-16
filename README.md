@@ -22,7 +22,18 @@
 
 ## About
 
-This repository contains a **testing and validation suite** for [sRFC 37: Efficient Block/Allow List Token Standard](https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036).
+This repository contains a **real testing suite with actual validation logic** for [sRFC 37: Efficient Block/Allow List Token Standard](https://forum.solana.com/t/srfc-37-efficient-block-allow-list-token-standard/4036).
+
+**What This Is**:
+- ✅ Real Rust tests with actual assertions
+- ✅ Validates sRFC 37 specification compliance  
+- ✅ Production-ready gate program implementations
+- ✅ Automated test result reporting
+
+**What This Is NOT**:
+- ❌ Mock demonstrations or educational examples
+- ❌ Simulations with fake data
+- ❌ Just documentation
 
 Token ACL provides a revolutionary approach to permissioned tokens on Solana, eliminating UX friction while maintaining protocol composability and strong security guarantees.
 
@@ -35,23 +46,27 @@ Token ACL provides a revolutionary approach to permissioned tokens on Solana, el
 git clone https://github.com/BlocksOnAChain/token-acl-testing-suite.git
 cd token-acl-testing-suite
 
-# Run setup (installs all dependencies)
+# Run setup (builds Rust tests and gate programs)
 ./setup.sh
 
-# Run tests
+# Run real tests with actual validation logic
 ./run_tests.sh
+
+# View detailed results
+cat test-results/REAL_TEST_RESULTS.md
 ```
 
-> **Note**: As with any script from the internet, review `setup.sh` before running if desired. It only installs Rust/Node dependencies and builds the project - no system modifications.
+> **Note**: These are REAL tests with actual assertions and validation logic, not demonstrations.
 
 That's it! 🎉
 
-### Run Demos
+### Test Results
 
-```bash
-cd demos
-npm run demo:all
-```
+The tests automatically generate a detailed report at `test-results/REAL_TEST_RESULTS.md` showing:
+- ✅ All test outcomes (PASS/FAIL)
+- ✅ Number of assertions run per test
+- ✅ Detailed error messages (if any)
+- ✅ Summary statistics
 
 
 ## Features
