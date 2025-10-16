@@ -162,7 +162,7 @@ cargo run --release
 
 ```bash
 # After running tests, view the report
-cat results/test_report.md
+cat test-results/REAL_TEST_RESULTS.md
 ```
 
 ## Running the Demos

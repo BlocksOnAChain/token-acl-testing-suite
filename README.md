@@ -30,11 +30,6 @@ This repository contains a **real testing suite with actual validation logic** f
 - ✅ Production-ready gate program implementations
 - ✅ Automated test result reporting
 
-**What This Is NOT**:
-- ❌ Mock demonstrations or educational examples
-- ❌ Simulations with fake data
-- ❌ Just documentation
-
 Token ACL provides a revolutionary approach to permissioned tokens on Solana, eliminating UX friction while maintaining protocol composability and strong security guarantees.
 
 ## Quick Start
@@ -236,7 +231,7 @@ npm run demo:geo
 
 ```bash
 # Test report
-cat results/test_report.md
+cat test-results/REAL_TEST_RESULTS.md
 
 # Complete validation
 cat FINAL_SUMMARY.md

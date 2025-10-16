@@ -60,7 +60,9 @@ else
 fi
 
 echo ""
-echo "Test report generated at: results/test_report.md"
+echo "Test reports generated at:"
+echo "  • test-results/REAL_TEST_RESULTS.md"
+echo "  • test-results/CORE_LOGIC_TEST_RESULTS.md"
 echo ""
 
 exit $TEST_RESULT
