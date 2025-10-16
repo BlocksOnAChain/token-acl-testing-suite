@@ -40,6 +40,12 @@ pub struct CoverageAnalysis {
     pub security_tests: CoverageMetrics,
 }
 
+impl Default for CoverageAnalysis {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl CoverageAnalysis {
     /// Create a new coverage analysis
     pub fn new() -> Self {
@@ -345,7 +351,7 @@ pub mod coverage_reporting {
             for (i, recommendation) in results.recommendations.iter().enumerate() {
                 report.push_str(&format!("{}. {}\n", i + 1, recommendation));
             }
-            report.push_str("\n");
+            report.push('\n');
         }
 
         // Coverage trends (placeholder for future implementation)

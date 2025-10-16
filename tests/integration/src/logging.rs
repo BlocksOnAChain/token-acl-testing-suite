@@ -191,6 +191,7 @@ pub fn init_logger(level: LogLevel) {
 pub fn get_logger() -> &'static mut Logger {
     // SAFETY: This is safe because we initialize the logger once and then only read/write to it
     // in a controlled manner. The logger is designed to be thread-safe for our use case.
+    #[allow(static_mut_refs)]
     unsafe { GLOBAL_LOGGER.as_mut().expect("Logger not initialized") }
 }
 
@@ -286,7 +287,7 @@ pub mod debugging {
     ) {
         let logger = get_logger();
         let context = serde_json::json!({
-            "seeds": seeds.iter().map(|s| hex::encode(s)).collect::<Vec<_>>(),
+            "seeds": seeds.iter().map(hex::encode).collect::<Vec<_>>(),
             "program_id": program_id.to_string(),
             "pda": pda.to_string(),
             "bump": bump,

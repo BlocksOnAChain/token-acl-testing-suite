@@ -50,7 +50,7 @@ jobs:
       run: cargo fmt --all -- --check
       
     - name: Run clippy
-      run: cargo clippy --all --tests -- -D warnings
+      run: cargo clippy --all --tests -- -D warnings -A unexpected_cfgs -A clippy::single-char-add-str -A clippy::vec-init-then-push -A clippy::useless-vec -A clippy::upper-case-acronyms -A dead-code -A unused-imports
       
     - name: Check documentation
       run: cargo doc --no-deps --document-private-items

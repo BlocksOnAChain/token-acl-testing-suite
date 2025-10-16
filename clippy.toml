@@ -20,3 +20,6 @@ missing-docs-in-crate-items = false
 
 # Allow high complexity in test functions
 cognitive-complexity-threshold = 30
+
+# Note: Solana-specific CFG warnings from entrypoint! macro are handled
+# by adding #[allow(unexpected_cfgs)] attributes to the relevant files
