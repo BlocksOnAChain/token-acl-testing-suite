@@ -6,6 +6,7 @@ mod security;
 mod integration_flow_test;
 mod security_malicious_injection_test;
 mod rwa_workflow_test;
+mod actual_tests;
 
 use managed_freeze_authority::ManagedFreezeAuthorityTests;
 use permissionless_operations::PermissionlessOperationsTests;
@@ -15,6 +16,7 @@ use security::SecurityTests;
 use integration_flow_test::IntegrationFlowTest;
 use security_malicious_injection_test::MaliciousInjectionPreventionTests;
 use rwa_workflow_test::RWAWorkflowTest;
+use actual_tests::ActualTests;
 
 mod lib;
 use lib::{TestSuite, TestResult};
@@ -31,7 +33,14 @@ fn main() {
     
     let mut suite = TestSuite::new();
     
-    // RWA WORKFLOW TEST FIRST! (The heart of the problem/solution)
+    // ACTUAL TESTS WITH REAL LOGIC FIRST!
+    println!("\n═══ ACTUAL VALIDATION TESTS (Real Logic) ═══\n");
+    let results = ActualTests::run_all();
+    for result in results {
+        suite.add_result(result);
+    }
+    
+    // RWA WORKFLOW TEST (The heart of the problem/solution)
     println!("\n═══ RWA WORKFLOW TEST: THE HEART OF TOKEN ACL ═══\n");
     let results = RWAWorkflowTest::run_all();
     for result in results {
