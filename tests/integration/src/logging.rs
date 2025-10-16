@@ -191,9 +191,7 @@ pub fn init_logger(level: LogLevel) {
 pub fn get_logger() -> &'static mut Logger {
     // SAFETY: This is safe because we initialize the logger once and then only read/write to it
     // in a controlled manner. The logger is designed to be thread-safe for our use case.
-    unsafe { 
-        GLOBAL_LOGGER.as_mut().expect("Logger not initialized")
-    }
+    unsafe { GLOBAL_LOGGER.as_mut().expect("Logger not initialized") }
 }
 
 /// Enhanced error types for better error handling

@@ -15,9 +15,7 @@ use solana_sdk::{
     signature::{Keypair, Signer},
 };
 
-use token_acl_integration_tests::{
-    fixtures::test_data, reporting, utils, TestResultReport,
-};
+use token_acl_integration_tests::{fixtures::test_data, reporting, utils, TestResultReport};
 
 /// TEST 1: FAMP Maintains Baseline Freeze Authority
 ///

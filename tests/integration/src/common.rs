@@ -119,7 +119,11 @@ impl TestResultReport {
     ///
     /// Returns "PASS" if the test passed, "FAIL" if it failed.
     pub fn status(&self) -> &'static str {
-        if self.passed { "PASS" } else { "FAIL" }
+        if self.passed {
+            "PASS"
+        } else {
+            "FAIL"
+        }
     }
 
     /// Check if the test passed

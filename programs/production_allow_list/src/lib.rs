@@ -118,7 +118,11 @@ pub fn process_instruction(
 }
 
 /// Initialize the program configuration
-fn process_initialize(program_id: &Pubkey, accounts: &[AccountInfo], _data: &[u8]) -> ProgramResult {
+fn process_initialize(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    _data: &[u8],
+) -> ProgramResult {
     let account_info_iter = &mut accounts.iter();
 
     let config_account = next_account_info(account_info_iter)?;

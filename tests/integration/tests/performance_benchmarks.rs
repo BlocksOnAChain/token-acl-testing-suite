@@ -3,8 +3,8 @@
 //! This module provides comprehensive performance testing for all Token ACL operations
 //! to ensure they meet performance requirements and identify optimization opportunities.
 
-use token_acl_integration_tests::{
-    benchmarks::{performance_analysis, performance_benchmarks, BenchmarkRunner},
+use token_acl_integration_tests::benchmarks::{
+    performance_analysis, performance_benchmarks, BenchmarkRunner,
 };
 
 /// Benchmark PDA derivation performance
