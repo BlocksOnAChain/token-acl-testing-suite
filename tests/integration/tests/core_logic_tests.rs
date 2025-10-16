@@ -786,8 +786,7 @@ fn generate_comprehensive_test_report() {
     std::fs::create_dir_all("../../test-results").ok();
     std::fs::write("../../test-results/CORE_LOGIC_TEST_RESULTS.md", &report).ok();
     
-    println!("\n{}", report);
-    println!("📊 Core logic test report saved to: test-results/CORE_LOGIC_TEST_RESULTS.md\n");
+    // Report is written to file; avoid stdout noise during tests
     
     assert_eq!(failed, 0, "{} core logic tests failed", failed);
 }

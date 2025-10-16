@@ -458,8 +458,7 @@ fn generate_test_report() {
     std::fs::create_dir_all("../../test-results").ok();
     std::fs::write("../../test-results/REAL_TEST_RESULTS.md", &report).ok();
     
-    println!("\n{}", report);
-    println!("📊 Report saved to: test-results/REAL_TEST_RESULTS.md\n");
+    // Report is written to file; avoid stdout noise during tests
     
     // Assert all tests passed
     assert_eq!(failed, 0, "{} tests failed", failed);
