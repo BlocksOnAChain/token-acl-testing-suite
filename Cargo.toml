@@ -1,8 +1,9 @@
 [workspace]
 members = [
-    "tests/test-client",
+    "tests/integration",
     "gate_programs/allow_list",
-    "gate_programs/block_list"
+    "gate_programs/block_list",
+    "gate_programs/allow_list_production"
 ]
 resolver = "2"
 

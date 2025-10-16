@@ -23,12 +23,12 @@ echo ""
 mkdir -p results
 
 # Run the test suite
-echo -e "${BLUE}►${NC} Running comprehensive test suite..."
+echo -e "${BLUE}►${NC} Running real validation test suite..."
 echo ""
 
-cd tests/test-client
+cd tests/integration
 
-if cargo run --release; then
+if cargo test -- --nocapture; then
     echo ""
     echo -e "${GREEN}╔═══════════════════════════════════════════════════════════════════╗${NC}"
     echo -e "${GREEN}║                    ALL TESTS PASSED! ✓                            ║${NC}"
@@ -38,15 +38,14 @@ if cargo run --release; then
     echo ""
     echo "═══ QUICK SUMMARY ═══"
     echo ""
-    echo "✅ Integration Flow Tests (3 tests)"
-    echo "✅ Managed Freeze Authority Tests (6 tests)"
-    echo "✅ Permissionless Operations Tests (7 tests)"
-    echo "✅ Gate Program Interface Tests (8 tests)"
-    echo "✅ Composability Tests (7 tests)"
-    echo "✅ Security Tests (7 tests)"
-    echo "✅ Malicious Injection Prevention Tests (6 tests)"
+    echo "✅ PDA Derivation Tests"
+    echo "✅ Discriminator Validation Tests"
+    echo "✅ MintConfig Structure Tests"
+    echo "✅ Permission Flags Tests"
+    echo "✅ Gating Program Validation Tests"
     echo ""
-    echo "Total: 41 tests - All passing ✓"
+    echo "Total: Real validation tests with actual assertions ✓"
+    echo "See detailed results: test-results/REAL_TEST_RESULTS.md"
     echo ""
     EXIT_CODE=0
 else

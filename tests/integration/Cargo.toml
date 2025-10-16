@@ -1,0 +1,20 @@
+[package]
+name = "token-acl-real-tests"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+solana-program = "1.18"
+solana-sdk = "1.18"
+solana-program-test = "1.18"
+spl-token-2022 = { version = "1.0", features = ["serde-traits"] }
+spl-tlv-account-resolution = "0.5"
+borsh = "0.10"
+tokio = { version = "1.35", features = ["full"] }
+anyhow = "1.0"
+chrono = "0.4"
+
+[[test]]
+name = "integration_tests"
+path = "tests/integration_tests.rs"
+

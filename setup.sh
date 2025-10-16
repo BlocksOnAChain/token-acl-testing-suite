@@ -78,14 +78,14 @@ fi
 echo ""
 print_status "Installing Rust dependencies..."
 
-# Build test client
+# Build integration tests
 echo ""
-print_status "Building test client..."
-cd tests/test-client
+print_status "Building integration tests..."
+cd tests/integration
 if cargo build --release; then
-    print_success "Test client built successfully"
+    print_success "Integration tests built successfully"
 else
-    print_error "Test client build failed"
+    print_error "Integration tests build failed"
     exit 1
 fi
 cd ../..
@@ -114,18 +114,7 @@ else
 fi
 cd ../..
 
-echo ""
-print_status "Installing Node.js dependencies..."
-
-# Install demo dependencies
-cd demos
-if npm install; then
-    print_success "Demo dependencies installed successfully"
-else
-    print_error "Demo dependencies installation failed"
-    exit 1
-fi
-cd ..
+# Node.js dependencies not needed - we removed mock demos
 
 # Create results directory
 mkdir -p results
