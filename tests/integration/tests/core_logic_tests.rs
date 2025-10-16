@@ -124,7 +124,6 @@ fn run_interface_optional_methods_test() -> TestResultReport {
     enum GateResponse {
         Success,
         NotSupported,
-        Denied,
     }
     
     struct GatingProgram {
@@ -221,19 +220,19 @@ fn run_permission_deescalation_test() -> TestResultReport {
     
     // Simulate accounts passed from FAMP to gating program
     struct AccountPermission {
-        pubkey: Pubkey,
+        _pubkey: Pubkey,
         is_signer: bool,    // Should be FALSE for de-escalation
         is_writable: bool,  // Should be FALSE for security
     }
     
     let accounts_to_gating_program = vec![
         AccountPermission {
-            pubkey: user.pubkey(),
+            _pubkey: user.pubkey(),
             is_signer: false,   // De-escalated!
             is_writable: false, // De-escalated!
         },
         AccountPermission {
-            pubkey: token_account,
+            _pubkey: token_account,
             is_signer: false,
             is_writable: false, // De-escalated!
         },

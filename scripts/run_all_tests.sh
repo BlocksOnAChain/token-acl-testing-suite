@@ -22,7 +22,7 @@ mkdir -p results
 
 echo "Step 1: Building test client..."
 cd tests/test-client
-cargo build --release
+RUSTFLAGS="-Awarnings" cargo build --release
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✅ Build successful${NC}"
@@ -34,9 +34,9 @@ fi
 echo ""
 echo "Step 2: Building gate programs..."
 cd ../../gate_programs/allow_list
-cargo build --release
+RUSTFLAGS="-Awarnings" cargo build --release
 cd ../block_list
-cargo build --release
+RUSTFLAGS="-Awarnings" cargo build --release
 cd ../..
 
 echo -e "${GREEN}✅ Gate programs built${NC}"
@@ -44,7 +44,7 @@ echo -e "${GREEN}✅ Gate programs built${NC}"
 echo ""
 echo "Step 3: Running tests..."
 cd tests/test-client
-cargo run --release
+RUSTFLAGS="-Awarnings" cargo run --release
 
 TEST_RESULT=$?
 

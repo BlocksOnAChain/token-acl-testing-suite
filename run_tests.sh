@@ -28,7 +28,8 @@ echo ""
 
 cd tests/integration
 
-if cargo test -- --nocapture; then
+# Silence rustc warnings during test runs
+if RUSTFLAGS="-Awarnings" cargo test -- --nocapture; then
     echo ""
     echo -e "${GREEN}╔═══════════════════════════════════════════════════════════════════╗${NC}"
     echo -e "${GREEN}║                    ALL TESTS PASSED! ✓                            ║${NC}"
