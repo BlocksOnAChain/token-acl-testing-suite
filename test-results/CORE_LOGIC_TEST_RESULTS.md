@@ -1,6 +1,6 @@
 # Token ACL Core Logic Test Results
 
-**Generated**: 2025-10-16 13:05:59 UTC
+**Generated**: 2025-10-16 13:28:35 UTC
 
 ## Summary
 
